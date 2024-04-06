@@ -36,7 +36,7 @@
 
             const formData = new FormData(form);
 
-            fetch('/esi', {
+            fetch('https://jaylohokare.pythonanywhere.com/esi', {
                 method: 'POST',
                 body: formData
             })
@@ -49,7 +49,7 @@
                 document.getElementById('esi-response').innerHTML = "Error: Could not evaluate ESI score.";
             });
 
-            fetch('/ews', {
+            fetch('https://jaylohokare.pythonanywhere.com/ews', {
                 method: 'POST',
                 body: formData
             })
