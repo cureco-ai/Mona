@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Vital Sign Assessment</h1>
-    <form id="vital-signs" method="get">
+    <form id="vital-signs" method="post">
         <div>
             <label for="respiratory_rate">Respiratory Rate: </label>
             <input type="number" id="respiratory_rate" name="respiratory_rate" required>
@@ -37,7 +37,7 @@
             const formData = new FormData(form);
 
             fetch('https://jaylohokare.pythonanywhere.com/esi', {
-                method: 'GET',
+                method: 'POST',
                 body: formData
             })
             .then(response => response.json())
@@ -50,7 +50,7 @@
             });
 
             fetch('https://jaylohokare.pythonanywhere.com/ews', {
-                method: 'GET',
+                method: 'POST',
                 body: formData
             })
             .then(response => response.text())
